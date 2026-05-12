@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0E1A36">
+    <title>ИЛАТА — Стоматологическая клиника в Пушкине, Санкт-Петербург</title>
+    <meta name="description" content="Стоматологическая клиника ИЛАТА в Санкт-Петербурге, г. Пушкин. Терапия, имплантация, ортопедия, ортодонтия, отбеливание Zoom. Авторские методики, современное оборудование.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%230E1A36'/%3E%3Cpath d='M30 30 L30 70 L36 70 L36 45 L48 70 L52 70 L52 30 L46 30 L46 55 L34 30 Z' fill='%23F5F2EA'/%3E%3Ccircle cx='65' cy='42' r='6' fill='%23B8946A'/%3E%3C/svg%3E">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header" id="siteHeader">
+        <div class="container header-inner">
+            <a href="#top" class="logo" aria-label="ИЛАТА — на главную">
+                <span class="logo-mark" aria-hidden="true">
+                    <svg viewBox="0 0 44 44" fill="none">
+                        <circle cx="22" cy="22" r="21" stroke="currentColor" stroke-width="1.4"/>
+                        <path d="M13 13 L13 31 L15.8 31 L15.8 19.4 L22.6 31 L25.6 31 L25.6 13 L22.8 13 L22.8 24.6 L16 13 Z" fill="currentColor"/>
+                        <circle cx="31" cy="17" r="2.4" fill="currentColor" opacity="0.85"/>
+                    </svg>
+                </span>
+                <span class="logo-text">
+                    <span class="logo-name">ИЛАТА</span>
+                    <span class="logo-tag">стоматология · Пушкин</span>
+                </span>
+            </a>
+            <nav class="site-nav" aria-label="Основная навигация">
+                <a href="#services">Услуги</a>
+                <a href="#advantages">О клинике</a>
+                <a href="#reviews">Отзывы</a>
+                <a href="#prices">Цены</a>
+                <a href="#contact">Контакты</a>
+            </nav>
+            <div class="header-actions">
+                <a href="tel:+78122004947" class="header-phone" aria-label="Позвонить в клинику">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    <span>+7 (812) 200-49-47</span>
+                </a>
+                <a href="#contact" class="btn btn-primary btn-magnetic" data-magnetic>
+                    <span>Записаться</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </a>
+                <button class="nav-toggle" aria-label="Меню" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile menu drawer -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+        <nav class="mobile-nav">
+            <a href="#services">Услуги</a>
+            <a href="#advantages">О клинике</a>
+            <a href="#reviews">Отзывы</a>
+            <a href="#prices">Цены</a>
+            <a href="#contact">Контакты</a>
+            <a href="tel:+78122004947" class="mobile-phone">+7 (812) 200-49-47</a>
+            <a href="#contact" class="btn btn-primary btn-block">Записаться на приём</a>
+        </nav>
+    </div>
+
+    <main id="top">
+
+        <!-- ============ HERO ============ -->
+        <section class="hero" aria-labelledby="heroTitle">
+            <div class="hero-bg" aria-hidden="true">
+                <div class="hero-grain"></div>
+                <svg class="hero-orb hero-orb-1" viewBox="0 0 600 600" preserveAspectRatio="none">
+                    <defs>
+                        <radialGradient id="orbGrad1">
+                            <stop offset="0%" stop-color="#B8946A" stop-opacity="0.28"/>
+                            <stop offset="100%" stop-color="#B8946A" stop-opacity="0"/>
+                        </radialGradient>
+                    </defs>
+                    <circle cx="300" cy="300" r="300" fill="url(#orbGrad1)"/>
+                </svg>
+                <svg class="hero-orb hero-orb-2" viewBox="0 0 600 600" preserveAspectRatio="none">
+                    <defs>
+                        <radialGradient id="orbGrad2">
+                            <stop offset="0%" stop-color="#3D5A8A" stop-opacity="0.35"/>
+                            <stop offset="100%" stop-color="#3D5A8A" stop-opacity="0"/>
+                        </radialGradient>
+                    </defs>
+                    <circle cx="300" cy="300" r="300" fill="url(#orbGrad2)"/>
+                </svg>
+            </div>
+
+            <div class="container hero-inner">
+                <div class="hero-content">
+                    <div class="eyebrow eyebrow-light reveal" data-reveal>
+                        <span class="dot"></span>
+                        Санкт-Петербург, г. Пушкин · с 2009 года
+                    </div>
+
+                    <h1 id="heroTitle" class="hero-title reveal" data-reveal data-reveal-delay="100">
+                        Безвыходных <span class="serif-accent">ситуаций</span><br>
+                        со здоровьем зубов<br>
+                        <span class="title-accent">не бывает.</span>
+                    </h1>
+
+                    <p class="hero-sub reveal" data-reveal data-reveal-delay="200">
+                        Клиника «ИЛАТА» решает все стоматологические задачи в одном месте — от первой консультации до сложной имплантации. Создали условия, чтобы на приёме вы могли расслабиться.
+                    </p>
+
+                    <div class="hero-actions reveal" data-reveal data-reveal-delay="300">
+                        <a href="#contact" class="btn btn-primary btn-lg btn-magnetic" data-magnetic>
+                            <span>Записаться на приём</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="#services" class="btn btn-ghost-light btn-lg">
+                            <span>Наши услуги</span>
+                        </a>
+                    </div>
+
+                    <dl class="hero-meta reveal" data-reveal data-reveal-delay="400">
+                        <div>
+                            <dt>Часы работы</dt>
+                            <dd>пн—вс, до 21:30</dd>
+                        </div>
+                        <div>
+                            <dt>Адрес</dt>
+                            <dd>Колокольный пер., 5а</dd>
+                        </div>
+                        <div>
+                            <dt>Запись</dt>
+                            <dd>СМС · Telegram · WhatsApp</dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <div class="hero-visual reveal" data-reveal data-reveal-delay="200">
+                    <div class="visual-stage">
+                        <!-- Big mark -->
+                        <div class="visual-badge">
+                            <svg viewBox="0 0 280 280" aria-hidden="true">
+                                <defs>
+                                    <linearGradient id="badgeGrad" x1="0" y1="0" x2="1" y2="1">
+                                        <stop offset="0%" stop-color="#F5F2EA" stop-opacity="0.04"/>
+                                        <stop offset="100%" stop-color="#B8946A" stop-opacity="0.08"/>
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="140" cy="140" r="138" stroke="#F5F2EA" stroke-opacity="0.15" stroke-width="1" fill="url(#badgeGrad)"/>
+                                <circle cx="140" cy="140" r="110" stroke="#F5F2EA" stroke-opacity="0.08" stroke-width="1" fill="none"/>
+                                <!-- Circular text path -->
+                                <defs>
+                                    <path id="circlePath" d="M 140,140 m -90,0 a 90,90 0 1,1 180,0 a 90,90 0 1,1 -180,0"/>
+                                </defs>
+                                <text fill="#F5F2EA" fill-opacity="0.55" font-family="Outfit, sans-serif" font-size="9.5" letter-spacing="3.5">
+                                    <textPath href="#circlePath" startOffset="0">
+                                        STOMATOLOGY · CLINIC · ИЛАТА · PUSHKIN · 2009 · СТОМАТОЛОГИЯ · ИЛАТА · ESTAB.
+                                    </textPath>
+                                </text>
+                                <!-- Center mark -->
+                                <g transform="translate(140 140)">
+                                    <path d="M-30 -28 L-30 28 L-21 28 L-21 -7 L11 28 L20 28 L20 -28 L11 -28 L11 7 L-21 -28 Z" fill="#F5F2EA"/>
+                                    <circle cx="32" cy="-18" r="6" fill="#B8946A"/>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <!-- Floating rating card -->
+                        <div class="float-card float-card-rating">
+                            <div class="card-stars" aria-label="Рейтинг 5 из 5">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            </div>
+                            <div class="card-title">4.9 на Яндекс Картах</div>
+                            <div class="card-subtitle">347 отзывов пациентов</div>
+                        </div>
+
+                        <!-- Floating specialist card -->
+                        <div class="float-card float-card-team">
+                            <div class="team-avatars" aria-hidden="true">
+                                <span style="background:linear-gradient(135deg,#C9A77E,#8A6F4C)">ТА</span>
+                                <span style="background:linear-gradient(135deg,#3D5A8A,#1F3057)">КВ</span>
+                                <span style="background:linear-gradient(135deg,#7A5A8A,#4B3556)">МИ</span>
+                                <span class="avatar-more">+9</span>
+                            </div>
+                            <div class="card-title">12 специалистов</div>
+                            <div class="card-subtitle">терапевты · хирурги · ортопеды</div>
+                        </div>
+
+                        <!-- Floating live status -->
+                        <div class="float-card float-card-status">
+                            <div class="status-live"><span class="pulse-dot"></span> Принимаем сегодня</div>
+                            <div class="card-title status-time">до 21:30</div>
+                            <div class="card-subtitle">Свободные окна на завтра</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marquee strip -->
+            <div class="marquee" aria-hidden="true">
+                <div class="marquee-track">
+                    <span>Терапия</span><span class="m-dot">·</span>
+                    <span>Имплантация Roxolid</span><span class="m-dot">·</span>
+                    <span>Отбеливание Zoom</span><span class="m-dot">·</span>
+                    <span>Виниры</span><span class="m-dot">·</span>
+                    <span>Брекеты и элайнеры</span><span class="m-dot">·</span>
+                    <span>Лечение пародонтита</span><span class="m-dot">·</span>
+                    <span>Терапия</span><span class="m-dot">·</span>
+                    <span>Имплантация Roxolid</span><span class="m-dot">·</span>
+                    <span>Отбеливание Zoom</span><span class="m-dot">·</span>
+                    <span>Виниры</span><span class="m-dot">·</span>
+                    <span>Брекеты и элайнеры</span><span class="m-dot">·</span>
+                    <span>Лечение пародонтита</span><span class="m-dot">·</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SERVICES ============ -->
+        <section class="section section-services" id="services" aria-labelledby="servicesTitle">
+            <div class="container">
+                <header class="section-head">
+                    <div class="section-head-left">
+                        <div class="eyebrow reveal" data-reveal>
+                            <span class="dot"></span>Что мы делаем
+                        </div>
+                        <h2 id="servicesTitle" class="section-title reveal" data-reveal data-reveal-delay="100">
+                            Семь направлений<br>
+                            <span class="serif-accent">одной заботы</span>
+                        </h2>
+                    </div>
+                    <p class="section-lead reveal" data-reveal data-reveal-delay="200">
+                        В «ИЛАТЕ» собрана команда специалистов, которая закрывает весь объём задач стоматологии — без необходимости ходить между клиниками.
+                    </p>
+                </header>
+
+                <ol class="services-list">
+                    <li class="service-row reveal" data-reveal>
+                        <span class="service-num">01</span>
+                        <div class="service-body">
+                            <h3 class="service-title">Терапевтическая стоматология</h3>
+                            <p class="service-desc">Лечение зубов любой сложности — от поверхностного кариеса до сложных корневых каналов. С гарантией качества.</p>
+                        </div>
+                        <span class="service-icon" aria-hidden="true">
+                            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 5.5C6.5 5.5 4.5 7.5 4.5 11c0 4 1.5 7 3 11.5.7 2 1.4 4 3 4 1.4 0 1.9-1.5 2.5-3.5.6-2 1-3.5 3-3.5s2.4 1.5 3 3.5 1.1 3.5 2.5 3.5c1.6 0 2.3-2 3-4 1.5-4.5 3-7.5 3-11.5 0-3.5-2-5.5-4.5-5.5-2 0-3.5 1-7 1S11 5.5 9 5.5z"/>
+                            </svg>
+                        </span>
+                        <span class="service-arrow" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </span>
+                    </li>
+
+                    <li class="service-row reveal" data-reveal>
+                        <span class="service-num">02</span>
+                        <div class="service-body">
+                            <h3 class="service-title">Хирургическая стоматология</h3>
+                            <p class="service-desc">Удаление зубов любой сложности, имплантация Roxolid и Grade 4/5, лечение периимплантита.</p>
+                        </div>
+                        <span class="service-icon" aria-hidden="true">
+                            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 4v24M11 8l5-4 5 4M12 28h8M14 13h4M13 17h6M13 21h6"/>
+                            </svg>
+                        </span>
+                        <span class="service-arrow" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </span>
+                    </li>
+
+                    <li class="service-row reveal" data-reveal>
+                        <span class="service-num">03</span>
+                        <div class="service-body">
+                            <h3 class="service-title">Ортопедическая стоматология</h3>
+                            <p class="service-desc">Протезирование зубов: коронки, виниры, мостовидные конструкции. Эстетика без компромиссов.</p>
+                        </div>
+                        <span class="service-icon" aria-hidden="true">
+                            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 14l3-8h16l3 8-4 14H9z M10 14h12 M12 20h8"/>
+                            </svg>
+                        </span>
+                        <span class="service-arrow" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </span>
+                    </li>
+
+                    <li class="service-row reveal" data-reveal>
+                        <span class="service-num">04</span>
+                        <div class="service-body">
+                            <h3 class="service-title">Ортодонтия</h3>
+                            <p class="service-desc">Исправление прикуса для детей и взрослых: классические брекеты и прозрачные элайнеры.</p>
+                        </div>
+                        <span class="service-icon" aria-hidden="true">
+                            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 14h24v6H4z M9 14v6M15 14v6M21 14v6M27 14v6M4 17h24"/>
+                            </svg>
+                        </span>
+                        <span class="service-arrow" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </span>
+                    </li>
+
+                    <li class="service-row reveal" data-reveal>
+                        <span class="service-num">05</span>
+                        <div class="service-body">
+                            <h3 class="service-title">Лечение пародонтита</h3>
+                            <p class="service-desc">Профессиональное лечение заболеваний дёсен на любой стадии — с восстановлением тканей.</p>
+                        </div>
+                        <span class="service-icon" aria-hidden="true">
+                            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 20c2-4 4-6 8-6s5 4 8 4 3-2 8-4M4 24c4-2 6-3 8-3s4 2 8 2 5-1 8-3"/>
+                                <path d="M10 14V8M16 14V6M22 14V8"/>
+                            </svg>
+                        </span>
+                        <span class="service-arrow" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </span>
+                    </li>
+
+                    <li class="service-row reveal" data-reveal>
+                        <span class="service-num">06</span>
+                        <div class="service-body">
+                            <h3 class="service-title">Микропротезирование</h3>
+                            <p class="service-desc">Вкладки, виниры и малые конструкции для тонкой эстетической реставрации зуба.</p>
+                        </div>
+                        <span class="service-icon" aria-hidden="true">
+                            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M8 6h16l-2 20H10z M11 11h10M13 16h6"/>
+                            </svg>
+                        </span>
+                        <span class="service-arrow" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </span>
+                    </li>
+
+                    <li class="service-row reveal" data-reveal>
+                        <span class="service-num">07</span>
+                        <div class="service-body">
+                            <h3 class="service-title">Профессиональная чистка</h3>
+                            <p class="service-desc">Ультразвуковая чистка, удаление налёта, полировка и насыщение эмали минералами.</p>
+                        </div>
+                        <span class="service-icon" aria-hidden="true">
+                            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 4l2 5 5 2-5 2-2 5-2-5-5-2 5-2z M24 18l1 3 3 1-3 1-1 3-1-3-3-1 3-1z M7 20l1 3 3 1-3 1-1 3-1-3-3-1 3-1z"/>
+                            </svg>
+                        </span>
+                        <span class="service-arrow" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </span>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ============ ADVANTAGES ============ -->
+        <section class="section section-advantages" id="advantages" aria-labelledby="advTitle">
+            <div class="adv-bg" aria-hidden="true">
+                <div class="adv-grain"></div>
+            </div>
+            <div class="container">
+                <header class="section-head section-head-dark">
+                    <div class="section-head-left">
+                        <div class="eyebrow eyebrow-light reveal" data-reveal>
+                            <span class="dot"></span>Почему выбирают ИЛАТУ
+                        </div>
+                        <h2 id="advTitle" class="section-title section-title-light reveal" data-reveal data-reveal-delay="100">
+                            Семь причин<br>
+                            <span class="serif-accent serif-accent-warm">остаться надолго</span>
+                        </h2>
+                    </div>
+                    <p class="section-lead section-lead-light reveal" data-reveal data-reveal-delay="200">
+                        Мы строим клинику, в которую возвращаются годами — не по необходимости, а потому что доверяют.
+                    </p>
+                </header>
+
+                <div class="adv-grid">
+                    <article class="adv-cell adv-cell-lg reveal" data-reveal>
+                        <div class="adv-icon">
+                            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 2l4 6 7 1-5 5 1 7-7-3-7 3 1-7-5-5 7-1z"/>
+                            </svg>
+                        </div>
+                        <h3 class="adv-title">Высококвалифицированные специалисты</h3>
+                        <p class="adv-desc">Терапевты, хирурги-имплантологи, ортопеды, гнатологи и пародонтологи под одной крышей. Каждый — со своей школой и опытом.</p>
+                    </article>
+
+                    <article class="adv-cell reveal" data-reveal data-reveal-delay="80">
+                        <div class="adv-icon">
+                            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 16c0-6 5-12 12-12s12 6 12 12-5 12-12 12S4 22 4 16z M10 16l4 4 8-8"/>
+                            </svg>
+                        </div>
+                        <h3 class="adv-title">Авторские методики</h3>
+                        <p class="adv-desc">Индивидуальный протокол лечения под каждый случай, а не шаблон.</p>
+                    </article>
+
+                    <article class="adv-cell reveal" data-reveal data-reveal-delay="160">
+                        <div class="adv-icon">
+                            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 3l11 4v9c0 6-5 11-11 13-6-2-11-7-11-13V7z M11 16l4 4 7-7"/>
+                            </svg>
+                        </div>
+                        <h3 class="adv-title">Чистота и безопасность</h3>
+                        <p class="adv-desc">Строгий контроль санитарных норм, стерилизация и независимый аудит.</p>
+                    </article>
+
+                    <article class="adv-cell reveal" data-reveal data-reveal-delay="240">
+                        <div class="adv-icon">
+                            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="4" y="6" width="24" height="16" rx="2"/>
+                                <path d="M4 22l24 0 M12 26h8 M16 22v4 M10 11l4 3-4 3 M16 14h8"/>
+                            </svg>
+                        </div>
+                        <h3 class="adv-title">Современное оборудование</h3>
+                        <p class="adv-desc">Свежие модели техники в каждом кабинете — от 3D-диагностики до микроскопов.</p>
+                    </article>
+
+                    <article class="adv-cell reveal" data-reveal data-reveal-delay="80">
+                        <div class="adv-icon">
+                            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="6" y="3" width="20" height="26" rx="3"/>
+                                <path d="M14 7h4 M10 13l3 3 6-6 M10 20l3 3 6-6"/>
+                            </svg>
+                        </div>
+                        <h3 class="adv-title">Удобное информирование</h3>
+                        <p class="adv-desc">Напомним о записи в Telegram, WhatsApp или СМС — выберите свой канал.</p>
+                    </article>
+
+                    <article class="adv-cell reveal" data-reveal data-reveal-delay="160">
+                        <div class="adv-icon">
+                            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="16" cy="16" r="12"/>
+                                <path d="M16 8v8l5 3 M8 13h2 M22 13h2"/>
+                            </svg>
+                        </div>
+                        <h3 class="adv-title">Бонусная программа</h3>
+                        <p class="adv-desc">Специальные привилегии для тех, кто возвращается. Скидки, накопительная система, приоритетная запись.</p>
+                    </article>
+
+                    <article class="adv-cell adv-cell-cta reveal" data-reveal data-reveal-delay="240">
+                        <div class="adv-cta-eyebrow">Готовы начать?</div>
+                        <h3 class="adv-cta-title">Запишитесь на консультацию — обсудим вашу задачу</h3>
+                        <a href="#contact" class="btn btn-light btn-magnetic" data-magnetic>
+                            <span>Записаться</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ REVIEWS ============ -->
+        <section class="section section-reviews" id="reviews" aria-labelledby="revTitle">
+            <div class="container">
+                <header class="section-head">
+                    <div class="section-head-left">
+                        <div class="eyebrow reveal" data-reveal>
+                            <span class="dot"></span>Что говорят пациенты
+                        </div>
+                        <h2 id="revTitle" class="section-title reveal" data-reveal data-reveal-delay="100">
+                            347 отзывов,<br>
+                            <span class="serif-accent">средняя 4.9</span>
+                        </h2>
+                    </div>
+                    <div class="reviews-summary reveal" data-reveal data-reveal-delay="200">
+                        <div class="summary-row">
+                            <div class="summary-stars" aria-label="Рейтинг 4.9">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            </div>
+                            <span class="summary-source">— Яндекс Карты</span>
+                        </div>
+                        <p>Реальные отзывы пациентов клиники, собранные за последние годы работы. Можете проверить каждый — мы ничего не редактируем.</p>
+                    </div>
+                </header>
+
+                <div class="reviews-grid">
+                    <article class="review reveal" data-reveal>
+                        <div class="review-stars" aria-label="5 из 5">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <blockquote class="review-quote">
+                            Посещаю клинику уже не первый год. Благодарна врачам за лечение и исправление моих зубных дел. Спасибо огромное Татьяне Александровне и Ксении Владимировне — золотые руки, а у меня красивые зубы.
+                        </blockquote>
+                        <footer class="review-foot">
+                            <span class="review-avatar" style="background:linear-gradient(135deg,#C9A77E,#8A6F4C)">О</span>
+                            <div class="review-meta">
+                                <div class="review-name">Ольга В.</div>
+                                <div class="review-source">Яндекс Карты</div>
+                            </div>
+                        </footer>
+                    </article>
+
+                    <article class="review reveal" data-reveal data-reveal-delay="100">
+                        <div class="review-stars" aria-label="5 из 5">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <blockquote class="review-quote">
+                            Отличная клиника, приятный и квалифицированный персонал. Всегда поход к стоматологу напрягал, но тут были развеяны все страхи, и впервые за 21 год от стоматолога вышел с хорошим настроением.
+                        </blockquote>
+                        <footer class="review-foot">
+                            <span class="review-avatar" style="background:linear-gradient(135deg,#3D5A8A,#1F3057)">И</span>
+                            <div class="review-meta">
+                                <div class="review-name">Илья К.</div>
+                                <div class="review-source">Яндекс Карты</div>
+                            </div>
+                        </footer>
+                    </article>
+
+                    <article class="review reveal" data-reveal data-reveal-delay="200">
+                        <div class="review-stars" aria-label="5 из 5">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <blockquote class="review-quote">
+                            Не первый год посещаю данную стоматологию. Стоит отметить, что тут прекрасные врачи, которые всегда придут на помощь, и чудесный администратор. Всё всегда вовремя, быстро и качественно.
+                        </blockquote>
+                        <footer class="review-foot">
+                            <span class="review-avatar" style="background:linear-gradient(135deg,#7A5A8A,#4B3556)">Д</span>
+                            <div class="review-meta">
+                                <div class="review-name">Дарья Б.</div>
+                                <div class="review-source">Яндекс Карты</div>
+                            </div>
+                        </footer>
+                    </article>
+
+                    <article class="review reveal" data-reveal data-reveal-delay="300">
+                        <div class="review-stars" aria-label="5 из 5">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <blockquote class="review-quote">
+                            Стоматология «Илата» очень нравится. Хожу теперь только туда. Отличные специалисты. Все очень вежливые, всегда посоветуют, как сделать лучше. Время ожидания устраивает. Цены приемлемые. Оборудование новое, современное.
+                        </blockquote>
+                        <footer class="review-foot">
+                            <span class="review-avatar" style="background:linear-gradient(135deg,#5A8A6F,#365644)">Т</span>
+                            <div class="review-meta">
+                                <div class="review-name">Татьяна Рыбакова</div>
+                                <div class="review-source">Яндекс Карты</div>
+                            </div>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ PRICES ============ -->
+        <section class="section section-prices" id="prices" aria-labelledby="priceTitle">
+            <div class="container">
+                <header class="section-head">
+                    <div class="section-head-left">
+                        <div class="eyebrow reveal" data-reveal>
+                            <span class="dot"></span>Прайс-лист
+                        </div>
+                        <h2 id="priceTitle" class="section-title reveal" data-reveal data-reveal-delay="100">
+                            Прозрачные цены<br>
+                            <span class="serif-accent">без сюрпризов</span>
+                        </h2>
+                    </div>
+                    <p class="section-lead reveal" data-reveal data-reveal-delay="200">
+                        Окончательная стоимость определяется на консультации — после диагностики и обсуждения плана. Возможна рассрочка.
+                    </p>
+                </header>
+
+                <div class="prices-wrap reveal" data-reveal>
+                    <div class="prices-tabs" role="tablist" aria-label="Категории цен">
+                        <button class="price-tab is-active" role="tab" aria-selected="true" data-price-tab="therapy">
+                            <span class="tab-num">01</span>
+                            <span class="tab-label">Терапия</span>
+                        </button>
+                        <button class="price-tab" role="tab" aria-selected="false" data-price-tab="whitening">
+                            <span class="tab-num">02</span>
+                            <span class="tab-label">Отбеливание</span>
+                        </button>
+                        <button class="price-tab" role="tab" aria-selected="false" data-price-tab="surgery">
+                            <span class="tab-num">03</span>
+                            <span class="tab-label">Хирургия</span>
+                        </button>
+                        <button class="price-tab" role="tab" aria-selected="false" data-price-tab="implant">
+                            <span class="tab-num">04</span>
+                            <span class="tab-label">Имплантация</span>
+                        </button>
+                    </div>
+
+                    <div class="prices-panels">
+
+                        <div class="price-panel is-active" data-price-panel="therapy" role="tabpanel">
+                            <ul class="price-list">
+                                <li class="price-row"><span class="price-name">Лечение поверхностного кариеса (стеклоиономер)</span><span class="price-dots" aria-hidden="true"></span><span class="price-value">3 520 ₽</span></li>
+                                <li class="price-row"><span class="price-name">Лечение поверхностного кариеса (композит)</span><span class="price-dots" aria-hidden="true"></span><span class="price-value">4 576 ₽</span></li>
+                                <li class="price-row"><span class="price-name">Кариес, стеклоиономер (разрушение &lt; 50%)</span><span class="price-dots" aria-hidden="true"></span><span class="price-value">3 200 ₽</span></li>
+                                <li class="price-row"><span class="price-name">Кариес, стеклоиономер (разрушение &gt; 50%)</span><span class="price-dots" aria-hidden="true"></span><span class="price-value">8 320 ₽</span></li>
+                                <li class="price-row"><span class="price-name">Кариес, композит (разрушение &lt; 50%)</span><span class="price-dots" aria-hidden="true"></span><span class="price-value">6 534 ₽</span></li>
+                                <li class="price-row"><span class="price-name">Кариес, композит (разрушение &gt; 50%)</span><span class="price-dots" aria-hidden="true"></span><span class="price-value">9 152 ₽</span></li>
+                                <li class="price-row"><span class="price-name">Клиновидный дефект, стеклоиономер</span><span class="price-dots" aria-hidden="true"></span><span class="price-value">4 576 ₽</span></li>
+                                <li class="price-row"><span class="price-name">Клиновидный дефект, композит</span><span class="price-dots" aria-hidden="true"></span><span class="price-value">4 750 ₽</span></li>
+                                <li class="price-row"><span class="price-name">Лечение корневого канала</span><span class="price-dots" aria-hidden="true"></span><span class="price-value">от 3 003 ₽</span></li>
+                                <li class="price-row"><span class="price-name">Герметизация фиссур</span><span class="price-dots" aria-hidden="true"></span><span class="price-value">2 140 ₽</span></li>
+                                <li class="price-row"><span class="price-name">Временная пломба, однокомпонентная</span><span class="price-dots" aria-hidden="true"></span><span class="price-value">792 ₽</span></li>
+                                <li class="price-row"><span class="price-name">Временная пломба, двухкомпонентная</span><span class="price-dots" aria-hidden="true"></span><span class="price-value">2 222 ₽</span></li>
+                                <li class="price-row"><span class="price-name">Наложение девитализирующей пасты</span><span class="price-dots" aria-hidden="true"></span><span class="price-value">2 750 ₽</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="price-panel" data-price-panel="whitening" role="tabpanel">
+                            <ul class="price-list">
+                                <li class="price-row"><span class="price-name">Внутриканальное отбеливание (одно посещение)</span><span class="price-dots" aria-hidden="true"></span><span class="price-value">2 750 ₽</span></li>
+                                <li class="price-row"><span class="price-name">Отбеливание Zoom</span><span class="price-dots" aria-hidden="true"></span><span class="price-value">58 806 ₽</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="price-panel" data-price-panel="surgery" role="tabpanel">
+                            <ul class="price-list">
+                                <li class="price-row"><span class="price-name">Удаление зуба</span><span class="price-dots" aria-hidden="true"></span><span class="price-value">3 267 – 10 450 ₽</span></li>
+                                <li class="price-row"><span class="price-name">Удаление имплантата</span><span class="price-dots" aria-hidden="true"></span><span class="price-value">3 267 – 6 534 ₽</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="price-panel" data-price-panel="implant" role="tabpanel">
+                            <ul class="price-list">
+                                <li class="price-row"><span class="price-name">Установка имплантата (без стоимости имплантата)</span><span class="price-dots" aria-hidden="true"></span><span class="price-value">15 675 ₽</span></li>
+                                <li class="price-row"><span class="price-name">Установка имплантата Roxolid</span><span class="price-dots" aria-hidden="true"></span><span class="price-value">71 874 ₽</span></li>
+                                <li class="price-row"><span class="price-name">Установка имплантата Roxolid (в растворе)</span><span class="price-dots" aria-hidden="true"></span><span class="price-value">87 549 ₽</span></li>
+                                <li class="price-row"><span class="price-name">Установка имплантата Grade 4</span><span class="price-dots" aria-hidden="true"></span><span class="price-value">58 806 ₽</span></li>
+                                <li class="price-row"><span class="price-name">Установка имплантата Grade 5</span><span class="price-dots" aria-hidden="true"></span><span class="price-value">45 738 ₽</span></li>
+                                <li class="price-row"><span class="price-name">Лечение периимплантита</span><span class="price-dots" aria-hidden="true"></span><span class="price-value">6 534 ₽</span></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <p class="price-note">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+                        Цены актуальны на дату публикации. Окончательная стоимость лечения определяется на консультации. Доступна рассрочка от клиники.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CONTACT ============ -->
+        <section class="section section-contact" id="contact" aria-labelledby="contactTitle">
+            <div class="contact-bg" aria-hidden="true">
+                <div class="contact-grain"></div>
+            </div>
+            <div class="container contact-grid">
+                <div class="contact-info">
+                    <div class="eyebrow eyebrow-light reveal" data-reveal>
+                        <span class="dot"></span>Как нас найти
+                    </div>
+                    <h2 id="contactTitle" class="section-title section-title-light reveal" data-reveal data-reveal-delay="100">
+                        Заходите —<br>
+                        <span class="serif-accent serif-accent-warm">или запишитесь</span>
+                    </h2>
+                    <p class="contact-lead reveal" data-reveal data-reveal-delay="200">
+                        Минимум полей — имя, телефон, удобное время. Перезвоним в течение 15 минут и подтвердим запись.
+                    </p>
+
+                    <ul class="contact-list reveal" data-reveal data-reveal-delay="300">
+                        <li>
+                            <span class="contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </span>
+                            <div>
+                                <div class="contact-label">Адрес</div>
+                                <div class="contact-value">Санкт-Петербург, г. Пушкин<br>Колокольный переулок, 5а, пом. 11-Н<br><small>вход со стороны Госпитального переулка</small></div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </span>
+                            <div>
+                                <div class="contact-label">Телефон</div>
+                                <div class="contact-value"><a href="tel:+78122004947">+7 (812) 200-49-47</a></div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 6v6l4 2"/>
+                                </svg>
+                            </span>
+                            <div>
+                                <div class="contact-label">Режим работы</div>
+                                <div class="contact-value">Ежедневно, до 21:30<br><small>уточняйте актуальное расписание</small></div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5"/>
+                                    <circle cx="12" cy="12" r="4"/>
+                                    <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+                                </svg>
+                            </span>
+                            <div>
+                                <div class="contact-label">Соцсети</div>
+                                <div class="contact-value">
+                                    <a href="#">Instagram</a> · <a href="#">ВКонтакте</a><br>
+                                    <small>@ilata.stomatologi</small>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="contact-form reveal" data-reveal data-reveal-delay="200" id="bookingForm" novalidate>
+                    <div class="form-head">
+                        <h3 class="form-title">Запись на приём</h3>
+                        <p class="form-sub">Перезвоним в течение 15 минут и подтвердим время.</p>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="field">
+                            <label for="fName">Как вас зовут</label>
+                            <input id="fName" name="name" type="text" autocomplete="name" required>
+                            <span class="field-error" data-error></span>
+                        </div>
+
+                        <div class="field">
+                            <label for="fPhone">Телефон</label>
+                            <input id="fPhone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+                            <span class="field-error" data-error></span>
+                        </div>
+
+                        <div class="field field-full">
+                            <label for="fService">Услуга</label>
+                            <div class="select-wrap">
+                                <select id="fService" name="service">
+                                    <option value="" selected>Выберите направление</option>
+                                    <option>Консультация и осмотр</option>
+                                    <option>Терапевтическая стоматология</option>
+                                    <option>Хирургическая стоматология</option>
+                                    <option>Ортопедия (виниры, коронки)</option>
+                                    <option>Ортодонтия (брекеты, элайнеры)</option>
+                                    <option>Лечение пародонтита</option>
+                                    <option>Имплантация</option>
+                                    <option>Профессиональная чистка</option>
+                                    <option>Отбеливание Zoom</option>
+                                </select>
+                                <svg class="select-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                            </div>
+                        </div>
+
+                        <div class="field field-full">
+                            <label for="fTime">Удобное время</label>
+                            <input id="fTime" name="time" type="text" placeholder="Например, завтра после 17:00">
+                        </div>
+                    </div>
+
+                    <label class="form-consent">
+                        <input type="checkbox" required checked>
+                        <span class="consent-box" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                        </span>
+                        <span class="consent-text">Согласен(-на) на обработку персональных данных согласно политике клиники</span>
+                    </label>
+
+                    <button type="submit" class="btn btn-primary btn-block btn-lg btn-magnetic" data-magnetic>
+                        <span class="btn-text">Записаться на приём</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                    </button>
+
+                    <div class="form-success" id="formSuccess" hidden>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                        <div>
+                            <div class="success-title">Заявка отправлена</div>
+                            <div class="success-sub">Администратор свяжется с вами в ближайшее время.</div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#top" class="logo logo-footer">
+                    <span class="logo-mark" aria-hidden="true">
+                        <svg viewBox="0 0 44 44" fill="none">
+                            <circle cx="22" cy="22" r="21" stroke="currentColor" stroke-width="1.4"/>
+                            <path d="M13 13 L13 31 L15.8 31 L15.8 19.4 L22.6 31 L25.6 31 L25.6 13 L22.8 13 L22.8 24.6 L16 13 Z" fill="currentColor"/>
+                            <circle cx="31" cy="17" r="2.4" fill="currentColor" opacity="0.85"/>
+                        </svg>
+                    </span>
+                    <span class="logo-text">
+                        <span class="logo-name">ИЛАТА</span>
+                        <span class="logo-tag">стоматология · Пушкин</span>
+                    </span>
+                </a>
+                <p class="footer-mission">Семейная стоматология в Пушкине с 2009 года. Возвращаемся к каждому пациенту как к человеку, а не случаю.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Клиника</h4>
+                <ul>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#advantages">О клинике</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#prices">Цены</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Контакты</h4>
+                <ul>
+                    <li><a href="tel:+78122004947">+7 (812) 200-49-47</a></li>
+                    <li>Колокольный пер., 5а, пом. 11-Н</li>
+                    <li>г. Пушкин, Санкт-Петербург</li>
+                    <li>Ежедневно до 21:30</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Соцсети</h4>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">ВКонтакте</a></li>
+                    <li><a href="#">Telegram</a></li>
+                    <li><a href="#">WhatsApp</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <div class="footer-legal">
+                © 2009—2026 Стоматологическая клиника «ИЛАТА». Все права защищены.<br>
+                Лицензия на осуществление медицинской деятельности: № ЛО-78-XXXXXX-XX
+            </div>
+            <div class="footer-disclaimer">
+                Имеются противопоказания. Необходима консультация специалиста.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
