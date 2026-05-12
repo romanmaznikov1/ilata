@@ -55,7 +55,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 84px;
+    scroll-padding-top: calc(84px + env(safe-area-inset-top, 0px));
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -238,13 +238,17 @@ ul, ol { list-style: none; }
     left: 0;
     right: 0;
     z-index: 50;
-    padding: 18px 0;
+    padding-top: calc(18px + env(safe-area-inset-top, 0px));
+    padding-bottom: 18px;
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
     transition: padding 0.4s var(--ease), background 0.4s var(--ease), border-color 0.4s var(--ease);
     border-bottom: 1px solid transparent;
 }
 
 .site-header.is-scrolled {
-    padding: 10px 0;
+    padding-top: calc(10px + env(safe-area-inset-top, 0px));
+    padding-bottom: 10px;
     background: rgba(245, 242, 234, 0.78);
     backdrop-filter: blur(18px) saturate(140%);
     -webkit-backdrop-filter: blur(18px) saturate(140%);
@@ -394,8 +398,14 @@ ul, ol { list-style: none; }
     background: var(--bg);
     transform: translateY(-105%);
     transition: transform 0.6s var(--ease);
-    padding: 100px 24px 40px;
+    padding:
+        calc(100px + env(safe-area-inset-top, 0px))
+        max(24px, env(safe-area-inset-right, 0px))
+        calc(40px + env(safe-area-inset-bottom, 0px))
+        max(24px, env(safe-area-inset-left, 0px));
     visibility: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .mobile-drawer.is-open {
@@ -426,8 +436,9 @@ ul, ol { list-style: none; }
 /* ----- 4. HERO ----- */
 .hero {
     position: relative;
+    min-height: 100vh;
     min-height: 100dvh;
-    padding-top: 120px;
+    padding-top: calc(120px + env(safe-area-inset-top, 0px));
     padding-bottom: 80px;
     background: var(--bg-dark);
     color: var(--ink-light);
@@ -1740,4 +1751,231 @@ ul, ol { list-style: none; }
         scroll-behavior: auto !important;
     }
     .reveal { opacity: 1; transform: none; }
+}
+
+/* ----- 13. MOBILE REFINEMENTS (≤768px) ----- */
+@media (max-width: 768px) {
+    html { scroll-padding-top: calc(72px + env(safe-area-inset-top, 0px)); }
+
+    /* Faster marquee + lighter type on small screens */
+    .marquee-track {
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        gap: 22px;
+        animation-duration: 25s;
+    }
+    .marquee { padding: 16px 0; }
+
+    /* Reviews quote-mark trimmed so it doesn't overflow narrow cards */
+    .review::before { font-size: 120px; right: 20px; top: -6px; }
+}
+
+/* ----- 14. SMALL MOBILE OVERRIDES (≤480px) ----- */
+@media (max-width: 480px) {
+    /* Layout & shell */
+    .container { padding: 0 16px; }
+
+    /* Typography & shared */
+    body { font-size: 15px; }
+    .eyebrow {
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        padding: 6px 10px;
+        gap: 8px;
+    }
+    .section { padding: 64px 0; }
+    .section-head { margin-bottom: 36px; gap: 22px; }
+    .section-title { margin-top: 16px; }
+    .section-lead { font-size: 14px; }
+    .btn { padding: 13px 18px; font-size: 14px; }
+    .btn-lg { padding: 16px 22px; font-size: 15px; }
+
+    /* Header — tighter logo on small */
+    .logo-mark { width: 38px; height: 38px; }
+    .logo-name { font-size: 15px; letter-spacing: 0.06em; }
+    .header-actions { gap: 6px; }
+    .header-phone { padding: 9px; }
+    .header-phone svg { width: 18px; height: 18px; }
+    .nav-toggle { width: 40px; height: 40px; }
+    .nav-toggle span:nth-child(1) { top: 14px; }
+    .nav-toggle span:nth-child(2) { top: 19px; }
+    .nav-toggle span:nth-child(3) { top: 24px; }
+    .nav-toggle[aria-expanded="true"] span:nth-child(1),
+    .nav-toggle[aria-expanded="true"] span:nth-child(3) { top: 19px; }
+
+    /* Mobile drawer typography */
+    .mobile-nav a { font-size: 20px; padding: 14px 4px; }
+
+    /* Hero */
+    .hero {
+        padding-top: calc(90px + env(safe-area-inset-top, 0px));
+        padding-bottom: 48px;
+    }
+    .hero-title {
+        font-size: 1.85rem;
+        line-height: 1.1;
+        letter-spacing: -0.022em;
+        margin-top: 18px;
+    }
+    .hero-sub { font-size: 15px; margin-top: 22px; line-height: 1.5; }
+    .hero-actions {
+        gap: 10px;
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 30px;
+    }
+    .hero-actions .btn { width: 100%; justify-content: center; }
+    .hero-meta { margin-top: 36px; padding-top: 24px; gap: 14px; }
+    .hero-meta dt { font-size: 10px; margin-bottom: 4px; }
+    .hero-meta dd { font-size: 14px; }
+
+    /* Hero visual — compact composition */
+    .hero-visual { height: 290px; }
+    .visual-badge { width: 200px; height: 200px; }
+    .float-card {
+        min-width: 134px;
+        padding: 10px 12px;
+        border-radius: 12px;
+    }
+    .card-title { font-size: 13px; }
+    .card-subtitle { font-size: 11px; }
+    .status-time { font-size: 18px; }
+    .card-stars svg { width: 12px; height: 12px; }
+    .team-avatars span {
+        width: 26px;
+        height: 26px;
+        font-size: 10px;
+        margin-left: -8px;
+    }
+    .float-card-rating { right: 0; top: 0; }
+    .float-card-team { left: 0; bottom: 14%; }
+    .float-card-status { right: 0; bottom: 0; }
+
+    .marquee { margin-top: 36px; }
+    .marquee-track { font-size: 11px; gap: 18px; letter-spacing: 0.12em; }
+
+    /* Services */
+    .service-row {
+        grid-template-columns: 32px 1fr 36px;
+        gap: 12px;
+        padding: 20px 0;
+    }
+    .service-num { font-size: 16px; }
+    .service-title { font-size: 1.0625rem; }
+    .service-desc { font-size: 13px; line-height: 1.45; }
+    .service-arrow { width: 36px; height: 36px; }
+    .service-arrow svg { width: 14px; height: 14px; }
+
+    /* Advantages */
+    .adv-grid { border-radius: 18px; }
+    .adv-cell { padding: 24px 20px; }
+    .adv-icon { width: 44px; height: 44px; }
+    .adv-icon svg { width: 22px; height: 22px; }
+    .adv-title { margin-top: 16px; font-size: 16px; }
+    .adv-cell-lg .adv-title { font-size: 17px; }
+    .adv-desc { font-size: 13px; margin-top: 8px; }
+    .adv-cta-eyebrow { font-size: 10px; }
+    .adv-cta-title { font-size: 17px; margin: 10px 0 18px; }
+
+    /* Reviews */
+    .review { padding: 22px 18px; border-radius: 18px; }
+    .review::before { font-size: 100px; right: 14px; top: -2px; }
+    .review-quote { font-size: 14px; line-height: 1.5; }
+    .review-stars { margin-bottom: 16px; }
+    .review-stars svg { width: 14px; height: 14px; }
+    .review-foot { margin-top: 20px; padding-top: 16px; gap: 10px; }
+    .review-avatar { width: 36px; height: 36px; font-size: 13px; }
+    .summary-stars svg { width: 18px; height: 18px; }
+    .reviews-grid { gap: 16px; }
+
+    /* Prices */
+    .prices-wrap { border-radius: 20px; }
+    .price-tab { padding: 14px 12px; gap: 6px; }
+    .tab-num { font-size: 13px; }
+    .tab-label { font-size: 13px; }
+    .prices-panels { padding: 18px 16px; }
+    .price-row {
+        grid-template-columns: 1fr auto;
+        gap: 6px;
+        padding: 13px 0;
+    }
+    .price-row:hover { padding-left: 0; padding-right: 0; }
+    .price-dots { display: none; }
+    .price-name { font-size: 13px; }
+    .price-value { font-size: 13px; }
+    .price-note {
+        padding: 14px 16px 18px;
+        font-size: 12px;
+        gap: 8px;
+    }
+    .price-note svg { width: 16px; height: 16px; }
+
+    /* Contact */
+    .contact-form { padding: 22px 18px; border-radius: 22px; }
+    .form-title { font-size: 20px; }
+    .form-sub { font-size: 13px; }
+    .form-grid { gap: 16px; }
+    .form-head { margin-bottom: 22px; }
+    /* Keep input font-size at 16px to prevent iOS zoom on focus */
+    .field input, .field select { font-size: 16px; padding: 12px 0; }
+    .field label { font-size: 11px; }
+    .form-consent {
+        font-size: 12px;
+        gap: 10px;
+        margin: 22px 0 18px;
+    }
+
+    .contact-list { margin-top: 30px; gap: 10px; }
+    .contact-list li {
+        grid-template-columns: 36px 1fr;
+        gap: 14px;
+        padding: 14px 0;
+    }
+    .contact-icon { width: 36px; height: 36px; }
+    .contact-icon svg { width: 16px; height: 16px; }
+    .contact-label { font-size: 10px; margin-bottom: 4px; }
+    .contact-value { font-size: 14px; }
+    .contact-value small { font-size: 12px; }
+    .contact-lead { margin-top: 20px; font-size: 14px; }
+
+    .form-success { padding: 16px; gap: 12px; }
+    .form-success svg { width: 26px; height: 26px; }
+    .success-title { font-size: 14px; }
+    .success-sub { font-size: 12px; }
+
+    /* Footer */
+    .site-footer { padding: 48px 0 24px; }
+    .footer-grid { gap: 28px; padding-bottom: 28px; }
+    .footer-col h4 { margin-bottom: 14px; font-size: 10px; }
+    .footer-col li, .footer-col a { font-size: 13px; }
+    .footer-mission { font-size: 13px; margin-top: 14px; }
+    .footer-legal, .footer-disclaimer { font-size: 11px; }
+    .footer-bottom { padding-top: 24px; gap: 16px; }
+}
+
+/* ----- 15. EXTRA-NARROW (≤360px) — iPhone SE & older ----- */
+@media (max-width: 360px) {
+    .container { padding: 0 14px; }
+    .hero-title { font-size: 1.7rem; }
+    .hero-sub { font-size: 14px; }
+    .hero-visual { height: 260px; }
+    .visual-badge { width: 180px; height: 180px; }
+    .float-card { min-width: 120px; padding: 9px 10px; }
+    .card-title { font-size: 12px; }
+    .card-subtitle { font-size: 10px; }
+    .service-title { font-size: 1rem; }
+    .review { padding: 20px 16px; }
+    .review-quote { font-size: 13px; }
+    .price-name, .price-value { font-size: 12px; }
+}
+
+/* ----- 16. LANDSCAPE PHONE — tighten vertical rhythm ----- */
+@media (max-width: 900px) and (orientation: landscape) and (max-height: 500px) {
+    .hero {
+        padding-top: calc(80px + env(safe-area-inset-top, 0px));
+        padding-bottom: 40px;
+    }
+    .hero-meta { margin-top: 28px; padding-top: 20px; }
+    .marquee { margin-top: 28px; }
+    .section { padding: 56px 0; }
 }
