@@ -35,6 +35,7 @@
         drawer.classList.remove('is-open');
         drawer.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
+        header.classList.remove('drawer-is-open');
     };
 
     toggle.addEventListener('click', () => {
@@ -46,6 +47,7 @@
             drawer.classList.add('is-open');
             drawer.setAttribute('aria-hidden', 'false');
             document.body.style.overflow = 'hidden';
+            header.classList.add('drawer-is-open');
         }
     });
 

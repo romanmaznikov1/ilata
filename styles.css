@@ -2527,3 +2527,23 @@ ul, ol { list-style: none; }
     .booking-option { padding: 14px; gap: 13px; }
     .booking-option-icon { width: 40px; height: 40px; }
 }
+
+/* =============================================
+   19 — Header: drawer open state
+   ============================================= */
+.site-header.drawer-is-open {
+    background: rgba(245, 242, 234, 0.97);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    border-bottom-color: var(--border);
+}
+.site-header.drawer-is-open .logo { color: var(--ink); }
+.site-header.drawer-is-open .logo-tag { color: var(--ink-muted); }
+.site-header.drawer-is-open .header-phone { color: var(--ink); }
+.site-header.drawer-is-open .header-phone svg { color: var(--accent); }
+.site-header.drawer-is-open .nav-toggle {
+    color: var(--ink);
+    background: rgba(26, 31, 46, 0.06);
+    border-color: var(--border);
+}
+.site-header.drawer-is-open .nav-toggle span { background: var(--ink); }
