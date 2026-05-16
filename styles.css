@@ -387,7 +387,7 @@ ul, ol { list-style: none; }
 }
 
 .nav-toggle span:nth-child(1) { top: 16px; width: 18px; }
-.nav-toggle span:nth-child(2) { top: 21px; width: 14px; right: 13px; left: auto; }
+.nav-toggle span:nth-child(2) { top: 21px; width: 18px; }
 .nav-toggle span:nth-child(3) { top: 26px; width: 18px; }
 
 .nav-toggle[aria-expanded="true"] span:nth-child(1) { top: 21px; transform: rotate(45deg); width: 20px; }
