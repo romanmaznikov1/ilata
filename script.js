@@ -49,7 +49,7 @@
         }
     });
 
-    drawer.querySelectorAll('a').forEach(link => {
+    drawer.querySelectorAll('a, button').forEach(link => {
         link.addEventListener('click', closeDrawer);
     });
 
@@ -159,86 +159,48 @@
         });
     });
 
-    /* ---------- Phone input masking ---------- */
-    const phoneInput = document.getElementById('fPhone');
-    if (phoneInput) {
-        phoneInput.addEventListener('input', (e) => {
-            const digits = e.target.value.replace(/\D/g, '').slice(0, 11);
-            let formatted = '';
-            if (digits.length === 0) {
-                formatted = '';
-            } else {
-                const d = digits.startsWith('7') || digits.startsWith('8') ? digits : '7' + digits;
-                const trimmed = d.slice(0, 11);
-                formatted = '+7';
-                if (trimmed.length > 1) formatted += ' (' + trimmed.slice(1, 4);
-                if (trimmed.length >= 4) formatted += ') ' + trimmed.slice(4, 7);
-                if (trimmed.length >= 7) formatted += '-' + trimmed.slice(7, 9);
-                if (trimmed.length >= 9) formatted += '-' + trimmed.slice(9, 11);
-            }
-            e.target.value = formatted;
-        });
-    }
+    /* ---------- Booking modal ---------- */
+    const bookingModal = document.getElementById('bookingModal');
 
-    /* ---------- Form submit ---------- */
-    const form = document.getElementById('bookingForm');
-    const success = document.getElementById('formSuccess');
+    if (bookingModal) {
+        let lastFocused = null;
 
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
+        const openBooking = () => {
+            lastFocused = document.activeElement;
+            bookingModal.classList.add('is-open');
+            bookingModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            const first = bookingModal.querySelector('.booking-option, .booking-close');
+            if (first) first.focus();
+        };
 
-            let valid = true;
-            const nameField = form.querySelector('#fName').closest('.field');
-            const phoneField = form.querySelector('#fPhone').closest('.field');
+        const closeBooking = () => {
+            bookingModal.classList.remove('is-open');
+            bookingModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+        };
 
-            const nameVal = form.querySelector('#fName').value.trim();
-            const phoneVal = form.querySelector('#fPhone').value.replace(/\D/g, '');
-
-            if (nameVal.length < 2) {
-                nameField.classList.add('has-error');
-                nameField.querySelector('[data-error]').textContent = 'Введите имя — минимум 2 символа';
-                valid = false;
-            } else {
-                nameField.classList.remove('has-error');
-                nameField.querySelector('[data-error]').textContent = '';
-            }
-
-            if (phoneVal.length < 11) {
-                phoneField.classList.add('has-error');
-                phoneField.querySelector('[data-error]').textContent = 'Введите корректный номер телефона';
-                valid = false;
-            } else {
-                phoneField.classList.remove('has-error');
-                phoneField.querySelector('[data-error]').textContent = '';
-            }
-
-            if (!valid) return;
-
-            // Simulate submit
-            const btn = form.querySelector('button[type="submit"]');
-            const original = btn.querySelector('.btn-text').textContent;
-            btn.querySelector('.btn-text').textContent = 'Отправляем…';
-            btn.disabled = true;
-
-            setTimeout(() => {
-                success.hidden = false;
-                form.querySelectorAll('input').forEach(i => { if (i.type !== 'checkbox') i.value = ''; });
-                form.querySelector('#fService').selectedIndex = 0;
-                btn.querySelector('.btn-text').textContent = original;
-                btn.disabled = false;
-            }, 800);
-        });
-
-        form.querySelectorAll('input, select').forEach(input => {
-            input.addEventListener('input', () => {
-                const field = input.closest('.field');
-                if (field) {
-                    field.classList.remove('has-error');
-                    const err = field.querySelector('[data-error]');
-                    if (err) err.textContent = '';
-                }
+        document.querySelectorAll('[data-booking]').forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                openBooking();
             });
+        });
+
+        bookingModal.querySelectorAll('[data-booking-close]').forEach(el => {
+            el.addEventListener('click', closeBooking);
+        });
+
+        // Close after picking a contact channel
+        bookingModal.querySelectorAll('.booking-option').forEach(opt => {
+            opt.addEventListener('click', () => setTimeout(closeBooking, 100));
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && bookingModal.classList.contains('is-open')) {
+                closeBooking();
+            }
         });
     }
 })();
